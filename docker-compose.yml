@@ -1,0 +1,14 @@
+# Specify the version of the Docker Compose file format.
+version: "3.3"
+
+# Define the services that make up your application.
+services:
+  # Name of the service (container) running your Node.js application.
+  my-node-app:
+    # Specify the Docker image to use for this service. 
+    image: shinushiju/my-node-app
+    
+    # Map port 4000 on the host to port 4000 in the container.
+    # This allows you to access the app from your host's port 4000.
+    ports:
+      - "4000:4000"
